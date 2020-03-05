@@ -70,7 +70,7 @@ export default (makeStore: MakeStore, config?: Config) => {
 
                 return {
                     isServer,
-                    initialState: isServer ? defaultedConfig.serializeState(store.getState()) : store.getState(),
+                    initialState: isServer ? defaultedConfig.serializeState(store.getState()) : defaultedConfig.serializeState(store.getState()),
                     initialProps,
                 };
             };
